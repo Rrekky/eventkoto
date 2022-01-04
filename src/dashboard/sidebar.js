@@ -1,54 +1,67 @@
-
+import {
+  BiSearch,
+  BiMenu,
+  BiCalendar,
+  BiLogOut
+} from "react-icons/bi";
+import {
+  TiLocationArrow
+} from "react-icons/ti"
+import {
+  BsGrid,
+  BsCalendar,
+  BsUser
+} from "react-icons/bs"
+import {
+  AiOutlineUser
+} from "react-icons/ai"
+import "./index.css"
+import {NavLink, Link} from "react-router-dom"
+import { useState } from "react";
 
 const Sidebar = () => {
+    const style= {color: "white" }
+
+    const [isActive, setisActive] = useState("false");
+    const handleToggle = () => {
+      setisActive(!isActive);
+    };
+
     
     
     return ( 
-        <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-git icon' ></i>
-        <div class="logo_name">EVENTKOTO</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search..." />
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-home-alt' ></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-       <a href="#">
-         <i class='bx bx-calendar' ></i>
-         <span class="links_name">Calendar</span>
-       </a>
-       <span class="tooltip">Calendar</span>
-     </li> 
-     <li>
-       <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User Profile</span>
-       </a>
-       <span class="tooltip">User Profile</span>
-     </li>
-
-     <li class="profile">
-         <div class="profile-details">
-           <div class="name_job">
-             <div class="name">Event yarn</div>
-             <div class="job">All-in-one Events</div>
-           </div>
-         </div>
-         <a href="index.html" id="log_out"><i class='bx bx-log-out' id="log_out" ></i></a>
-     </li>
-    </ul>
-  </div>
+      <div className={isActive ? "sidebar active": "sidebar"}>
+        <div className="logo-content">
+          <div className="logo"><TiLocationArrow />
+          <div className="logo-name">Coding Lab
+          </div>
+          
+          </div>
+          <BiMenu className="btn" onClick={handleToggle}/>
+          <ul className="nav-list">
+            <li> <BiSearch className="icon-search" style={style} onClick={handleToggle}/><input type="text" placeholder="Search..." />
+            {/* <span className="tooltip">Dashboard</span> */}
+            </li>
+            <li><NavLink to="/" className="links"> <BsGrid className="icon"/><span className="links-name"> Dashboard</span></NavLink>
+            {/* <span className="tooltip">Dashboard</span> */}
+            </li>
+            <li><NavLink to="/" className="links"> <BsCalendar className="icon"/><span className="links-name"> Calendar</span></NavLink>
+            {/* <span className="tooltip">Dashboard</span> */}
+            </li>
+            <li><NavLink to="/" className="links"> <AiOutlineUser className="icon"/><span className="links-name"> Profile</span></NavLink>
+            {/* <span className="tooltip">Dashboard</span> */}
+            </li>
+            <li>
+            <NavLink to="/" className="links"> <BiLogOut className="icon"/><span className="links-name"> Log out</span></NavLink>
+            {/* <span className="tooltip">Dashboard</span> */}
+         
+            </li>
+          </ul>
+          <div className="profile_content">
+       
+          </div>
+        </div>
+      </div>
      );
 
  
