@@ -6,6 +6,7 @@ const LoginPage = () => {
         <div className="login-page">
         <div className="left-side"><Leftside /></div>
         <div className="right-side"><Rightside />
+        
 
 
 
