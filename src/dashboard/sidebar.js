@@ -34,12 +34,12 @@ const Sidebar = () => {
         <div className="logo-content">
           <div className="logo"><TiLocationArrow />
           <div className="logo-name">Coding Lab
-          </div>
-          
+          </div>  
           </div>
           <BiMenu className="btn" onClick={handleToggle}/>
           <ul className="nav-list">
-            <li> <BiSearch className="icon-search" style={style} onClick={handleToggle}/><input type="text" placeholder="Search..." />
+          <BiSearch className="icon-search" style={style} onClick={handleToggle}/>
+            <li> <input type="text" placeholder="Search..." />
             {/* <span className="tooltip">Dashboard</span> */}
             </li>
             <li><NavLink to="/" className="links"> <BsGrid className="icon"/><span className="links-name"> Dashboard</span></NavLink>
