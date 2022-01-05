@@ -155,3 +155,106 @@
     bottom: 0;
 }
 
+/* DASHBOARD MAIN */
+
+.dashboard-main {
+    position: relative;
+    background: #E4E9F7;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(200% - 78px);
+    transition: all 0.5s ease;
+    z-index: -1;
+      overflow: hidden;
+}
+
+.sidebar.active ~ .dashboard-main{
+    left: 250px;
+    width: calc(200% - 250px);
+    opacity: 0.5;
+      
+  }
+  /* IMAGE SLIDER */
+
+  
+  .banner-slider { 
+    margin-top: 10px;
+    transform: translateX(40%);
+    width: 800px;
+    height: 300px;
+    border-radius: 10px;
+      overflow: hidden;
+
+    
+}
+
+.banner-slides {
+    width: 500%;
+    height: 300px;
+    display: flex;
+  
+}
+
+
+
+.banner-slide {
+    width: 20%;
+    transition: 1.5s;
+    
+  
+}
+
+.banner-slide img {
+    width: 800px;
+    height: 300px;
+
+}
+
+/*  */
+
+/* css for manual navigation */
+
+.nav-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.manual-btn {
+    border: 2px solid #b91f26;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background:  #b91f26;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+
+  
