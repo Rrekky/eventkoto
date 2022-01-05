@@ -33,7 +33,7 @@ const Sidebar = () => {
       <div className={isActive ? "sidebar active": "sidebar"}>
         <div className="logo-content">
           <div className="logo"><TiLocationArrow />
-          <div className="logo-name">Coding Lab
+          <div className="logo-name">EVENTKOTO
           </div>  
           </div>
           <BiMenu className="btn" onClick={handleToggle}/>
