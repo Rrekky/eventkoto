@@ -30,7 +30,7 @@ const Sidebar = () => {
     
     
     return ( 
-      <div className={isActive ? "sidebar active": "sidebar"}>
+      <div className={isActive ? "sidebar": "sidebar active"}>
         <div className="logo-content">
           <div className="logo"><TiLocationArrow />
           <div className="logo-name">EVENTKOTO

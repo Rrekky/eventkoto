@@ -1,0 +1,47 @@
+.list {
+  width: 100vw;
+  margin-top: 10px;
+  height: 200px;
+  overflow-y: hidden;
+  border-radius: 12px;
+}
+.list .listTitle {
+  color: #b91f26;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 50px;
+}
+.list .listbox {
+  position: absolute;
+  height: 150px;
+  max-width: 93vw;
+  background: #E4E9F7;
+  overflow-y: hidden;
+  border-radius: 12px;
+}
+.list .listbox .sliderArrow {
+  width: 50px;
+  height: 100%;
+  color: #b91f26;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+.list .listbox .sliderArrow.left {
+  left: 0;
+}
+.list .listbox .sliderArrow.right {
+  right: 0;
+}
+.list .listbox .container {
+  margin-left: 50px;
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  width: max-content;
+  transform: translateX(0px);
+  transition: all 1s ease;
+}
