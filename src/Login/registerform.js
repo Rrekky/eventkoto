@@ -6,28 +6,20 @@ import Input from "./input-register";
 import React, { useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory} from 'react-router-dom';
-import { signin, signup } from '../actions/auth';
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 const RegisterForm = () => {
    const [form, setForm] = useState(initialState);
-   const isSignup = true;
-   const dispatch = useDispatch();
    const history = useHistory();
    const classes = useStyles();
 
 
    const [showPassword, setShowPassword] = useState(false);
    const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword); 
-   const handleSubmit = (e) => {
-      e.preventDefault();
 
-    if (isSignup) {
-      dispatch(signup(form, history));
-    } else {
-      dispatch(signin(form, history));
-    }
+
+   const handleSubmit = (e) => {
    };
 
    const handleChange = () => {
@@ -39,6 +31,7 @@ const RegisterForm = () => {
     return (
       <div className="wrapper">
          <div className="right-side-reg">
+         <Link to="/"><button className="btn-back">Go back</button></Link>
          <h2> Register </h2>
           <span> Please Fill up the Form </span> <br />
                <Container component = "main" maxWidth = "xs">
@@ -47,23 +40,20 @@ const RegisterForm = () => {
                      {/* <Typography variant="h5">{isSignup ? 'Sign Up' : 'Sign In'}</Typography>  */}
                      <form className={classes.form} onSubmit={handleSubmit}>
                         <Grid container spacing={2}>
-                     
                                  <>
                                     <Input name="fullname" label="Full name" handleChange={handleChange} autoFocus xs={12} />
                                     <Input name="organization" label="Organization" handleChange={handleChange} autoFocus xs={12} /> 
                                     <Grid item xs={12} >
-                                    <Select name="college" label="College" handleChange={handleChange} autoFocus xs={12} fullWidth variant="outlined">
-              <MenuItem value="">College of Engineering</MenuItem>
-              <MenuItem value="male">College of Nursing</MenuItem>
-              <MenuItem value="female">College of Education</MenuItem>
-            </Select> </Grid>
-                                      
-                                    
+                                    <Select name="college" label="College of Engineering" handleChange={handleChange} autoFocus xs={12} fullWidth variant="outlined">
+                                     <MenuItem value="">College of Engineering</MenuItem>
+                                     <MenuItem value="male">College of Nursing</MenuItem>
+                                     <MenuItem value="female">College of Education</MenuItem>
+                                    </Select> </Grid>
                                     <Input name="email" label="Email" handleChange={handleChange} autoFocus xs={12} />
                                     <Input name="studentid" label="Student ID" handleChange={handleChange} autoFocus xs={12} /> 
                                     <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
                                     <Grid item xs={12} >
-                                    <Button type="submit" fullWidth variant="contained" color="error" className={classes.submit}>Sign Up</Button>
+                                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>Sign Up</Button><Button></Button>
                                     </Grid>
                                  </>
                            
