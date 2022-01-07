@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Finished = () => {
+const Detailbox = () => {
     return ( 
         <div className="clndrRight">
             <div className="event_box">
@@ -21,4 +21,4 @@ const Finished = () => {
      );
 }
  
-export default Finished;
+export default Detailbox;

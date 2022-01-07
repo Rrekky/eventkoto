@@ -3,8 +3,8 @@ import '../dashboard/index.css'
 import './index.css'
 import { NavLink } from "react-router-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Upcoming from "./upcoming";
-import Finished from "./finished"
+import Upcoming from "./eventlist";
+import Detailbox from "./Detailbox"
 
 const Calendar = () => {
     const ColoredLine = ({ color }) => (
@@ -30,7 +30,7 @@ const Calendar = () => {
             </div>
             <div className="calendarevents">
                 <Upcoming />
-                <Finished />
+                <Detailbox />
                 
             </div>
             

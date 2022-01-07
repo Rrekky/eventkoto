@@ -5,8 +5,8 @@ import CreateAcc from "./Login/CreateAcc";
 import Sidebar from "./dashboard/sidebar";
 import Dashboard from "./dashboard/dashboard"
 import Calendar from "./calendar/calendar";
-import Upcoming from "./calendar/upcoming";
-import Finished from "./calendar/finished";
+import Upcoming from "./calendar/eventlist";
+import Finished from "./calendar/Detailbox";
 
 function App() {  
   return (
