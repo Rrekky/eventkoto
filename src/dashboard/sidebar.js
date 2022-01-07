@@ -42,13 +42,13 @@ const Sidebar = () => {
             <li> <input type="text" placeholder="Search..." />
             {/* <span className="tooltip">Dashboard</span> */}
             </li>
-            <li><NavLink to="/" className="links"> <BsGrid className="icon"/><span className="links-name"> Dashboard</span></NavLink>
+            <li><NavLink to="/dashboard" className="links"> <BsGrid className="icon"/><span className="links-name"> Dashboard</span></NavLink>
             {/* <span className="tooltip">Dashboard</span> */}
             </li>
-            <li><NavLink to="/" className="links"> <BsCalendar className="icon"/><span className="links-name"> Calendar</span></NavLink>
+            <li><NavLink to="/calendar" className="links"> <BsCalendar className="icon"/><span className="links-name"> Calendar</span></NavLink>
             {/* <span className="tooltip">Dashboard</span> */}
             </li>
-            <li><NavLink to="/" className="links"> <AiOutlineUser className="icon"/><span className="links-name"> Profile</span></NavLink>
+            <li><NavLink to="/user" className="links"> <AiOutlineUser className="icon"/><span className="links-name"> Profile</span></NavLink>
             {/* <span className="tooltip">Dashboard</span> */}
             </li>
             <li>

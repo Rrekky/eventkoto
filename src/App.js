@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import CreateAcc from "./Login/CreateAcc";
 import Sidebar from "./dashboard/sidebar";
 import Dashboard from "./dashboard/dashboard"
+import Calendar from "./calendar/calendar";
+import Upcoming from "./calendar/upcoming";
+import Finished from "./calendar/finished";
 
 function App() {  
   return (
@@ -12,6 +15,9 @@ function App() {
         <Route exact path="/" component={LoginPage}></Route>
         <Route path="/create" component={CreateAcc}></Route>
         <Route path="/dashboard"  component={Dashboard}></Route>
+        <Route path="/calendar" component={Calendar}></Route>
+        <Route path="calendar/upcoming" component={Upcoming}> </Route>
+        <Route exact path="calendar/finished" component={Finished}> </Route>
       </div>
     </Router>
   );
